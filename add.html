@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tambah Game JSON</title>
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: #f9f3f8;
+      color: #333;
+      padding: 20px;
+    }
+    h2 {
+      color: #d63384;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #ff1493;
+    }
+    .output {
+      background: #fff;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 10px;
+      border: 1px dashed #ccc;
+      font-family: monospace;
+      white-space: pre-wrap;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Tambah Game Baru (Generate JSON)</h2>
+
+  <label>Judul Game</label>
+  <input type="text" id="title">
+
+  <label>Nama File (.jar)</label>
+  <input type="text" id="file" placeholder="contoh: games/love_story.jar">
+
+  <label>Icon Game</label>
+  <input type="text" id="icon" placeholder="contoh: images/love_icon.png">
+
+  <label>Screenshot Game</label>
+  <input type="text" id="screenshot" placeholder="contoh: images/love_screen.png">
+
+  <label>Kategori</label>
+  <select id="category">
+    <option value="romance">Romance</option>
+    <option value="sim">Simulation</option>
+    <option value="adventure">Adventure</option>
+    <option value="classic">Classic</option>
+  </select>
+
+  <label>Resolusi</label>
+  <input type="text" id="resolution" placeholder="contoh: 240x320">
+
+  <label>Deskripsi</label>
+  <textarea id="desc" rows="3"></textarea>
+
+  <button onclick="generateJSON()">Buat JSON</button>
+
+  <div class="output" id="output">JSON akan muncul di sini...</div>
+
+  <script>
+    function generateJSON() {
+      const data = {
+        title: document.getElementById('title').value.trim(),
+        file: document.getElementById('file').value.trim(),
+        icon: document.getElementById('icon').value.trim(),
+        screenshot: document.getElementById('screenshot').value.trim(),
+        category: document.getElementById('category').value.trim(),
+        desc: document.getElementById('desc').value.trim(),
+        resolution: document.getElementById('resolution').value.trim()
+      };
+
+      const output = JSON.stringify(data, null, 2);
+      document.getElementById('output').textContent = output;
+    }
+  </script>
+
+</body>
+  </html>
