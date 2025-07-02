@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Princess School",
+    "file": "games/princess_school.jar",
+    "icon": "images/princess_icon.png",
+    "screenshot": "images/princess_screen.png",
+    "category": "sim",
+    "desc": "Sekolah putri dan kisah seru di dalamnya.",
+    "resolution": "240x320"
+  },
+  {
+    "title": "Love Story",
+    "file": "games/love_story.jar",
+    "icon": "images/love_story_icon.png",
+    "screenshot": "images/love_story_screen.png",
+    "category": "romance",
+    "desc": "Petualangan cinta penuh drama dan pilihan hati.",
+    "resolution": "240x320"
+  },
+  {
+    "title": "Adventure Island",
+    "file": "games/adventure_island.jar",
+    "icon": "images/adventure_icon.png",
+    "screenshot": "images/adventure_screen.png",
+    "category": "adventure",
+    "desc": "Jelajahi pulau misterius dan pecahkan teka-teki!",
+    "resolution": "240x320"
+  },
+  {
+    "title": "Classic Puzzle",
+    "file": "games/classic_puzzle.jar",
+    "icon": "images/puzzle_icon.png",
+    "screenshot": "images/puzzle_screen.png",
+    "category": "classic",
+    "desc": "Game puzzle klasik yang bikin ketagihan!",
+    "resolution": "176x220"
+  }
+    ]
